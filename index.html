@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝕯𝖆𝖗𝖐 𝕰𝖒𝖕𝖎𝖗𝖊 - независимая организация 🏛</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+  <!-- Шапка -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">DARK <span>EMPIRE</span></a>
+      <nav class="nav" id="nav">
+        <a href="#clubs" class="nav__link">Клубы</a>
+        <a href="#tournaments" class="nav__link">Турниры и сетка</a>
+        <a href="#rules" class="nav__link">Требования</a>
+        <button class="btn btn--primary open-modal" type="button" data-club="Dark Empire">Вступить</button>
+      </nav>
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge">Независимая организация • 3 клуба + академия</span>
+        <h1>Единая экосистема клубов <span>Dark Empire</span></h1>
+        <p>От стабильного пуша в топы РУ и мира до чистого 3v3-проекта с нуля и академии для твинков. Выбирай свой дивизион и двигайся с командой.</p>
+        <div class="hero__actions">
+          <a href="#clubs" class="btn btn--primary">Выбрать клуб</a>
+          <a href="#tournaments" class="btn btn--secondary">Сетка и расписание</a>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat-card">
+          <div class="stat-card__value">3.6 млн 🏆</div>
+          <div class="stat-card__label">Основа Dark Empire</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value">3.3 млн 🏆</div>
+          <div class="stat-card__label">Dark Legion</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value">4</div>
+          <div class="stat-card__label">Активных состава</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__value">3 vs 3</div>
+          <div class="stat-card__label">Фокус Dark Order</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Подразделения (Клубы + Академия) -->
+  <section class="clubs" id="clubs">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Наши клубы и академия</h2>
+          <p class="section-subtitle">Нажми на тег клуба, чтобы скопировать его в один клик, или подай заявку онлайн</p>
+        </div>
+
+        <!-- JS Фильтр дивизионов -->
+        <div class="filter-bar" id="clubFilters">
+          <button class="filter-btn active" data-filter="all">Все (4)</button>
+          <button class="filter-btn" data-filter="top">Топ-составы</button>
+          <button class="filter-btn" data-filter="special">3v3 и Академия</button>
+        </div>
+      </div>
+
+      <div class="clubs-grid" id="clubsGrid">
+        <!-- 1. Dark Empire -->
+        <article class="club-card club-card--main" data-category="top">
+          <div class="club-card__top">
+            <span class="club-badge club-badge--purple">Главный состав</span>
+            <span class="club-trophies">3.7 млн 🏆</span>
+          </div>
+          <h3>🥷 Dark Empire</h3>
+          <p class="club-goal">Цели: Топ 20 РУ 🙏 и Топ 200 🌏</p>
+          <ul class="club-meta">
+            <li><span>Формат:</span> Активный пуш кубков и клубные события</li>
+            <li><span>Статус:</span> Набор по заявкам</li>
+          </ul>
+          <div class="club-card__footer">
+            <button class="tag-copy" type="button" data-tag="#DARKEMPIRE">#DARKEMPIRE 📋</button>
+            <button class="btn btn--primary btn--sm open-modal" type="button" data-club="Dark Empire">Подать заявку</button>
+          </div>
+        </article>
+
+        <!-- 2. Dark Legion -->
+        <article class="club-card" data-category="top">
+          <div class="club-card__top">
+            <span class="club-badge club-badge--blue">Второй состав</span>
+            <span class="club-trophies">3.3 млн 🏆</span>
+          </div>
+          <h3>👨‍💻 Dark Legion</h3>
+          <p class="club-goal">Цель: Топ 100 РУ 🚀</p>
+          <ul class="club-meta">
+            <li><span>Формат:</span> Стабильный рост и командная игра</li>
+            <li><span>Статус:</span> Открыт для сильных игроков</li>
+          </ul>
+          <div class="club-card__footer">
+            <button class="tag-copy" type="button" data-tag="#DARKLEGION">#DARKLEGION 📋</button>
+            <button class="btn btn--primary btn--sm open-modal" type="button" data-club="Dark Legion">Подать заявку</button>
+          </div>
+        </article>
+
+        <!-- 3. Dark Order -->
+        <article class="club-card" data-category="special">
+          <div class="club-card__top">
+            <span class="club-badge club-badge--emerald">Мегапроект с нуля</span>
+            <span class="club-trophies">Чисто 3 на 3</span>
+          </div>
+          <h3>🧙‍♂️ Dark Order</h3>
+          <p class="club-goal">Проект с нуля чисто в режим 3 на 3</p>
+          <ul class="club-meta">
+            <li><span>Формат:</span> Сыгранные тройки, драфты и скилл</li>
+            <li><span>Статус:</span> Набор в стартовый ростер</li>
+          </ul>
+          <div class="club-card__footer">
+            <button class="tag-copy" type="button" data-tag="#DARKORDER">#DARKORDER 📋</button>
+            <button class="btn btn--primary btn--sm open-modal" type="button" data-club="Dark Order">Подать заявку</button>
+          </div>
+        </article>
+
+        <!-- 4. Dark Akademia -->
+        <article class="club-card" data-category="special">
+          <div class="club-card__top">
+            <span class="club-badge club-badge--amber">Академия</span>
+            <span class="club-trophies">От 20 000 🏆</span>
+          </div>
+          <h3>👨‍🎓 Dark Akademia</h3>
+          <p class="club-goal">Площадка для твинков от 20к и резерва</p>
+          <ul class="club-meta">
+            <li><span>Формат:</span> Прокачка аккаунтов и переход в основу</li>
+            <li><span>Статус:</span> Свободный вход от 20к</li>
+          </ul>
+          <div class="club-card__footer">
+            <button class="tag-copy" type="button" data-tag="#DARKAKADEMIA">#DARKAKADEMIA 📋</button>
+            <button class="btn btn--primary btn--sm open-modal" type="button" data-club="Dark Akademia">Подать заявку</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Интерактивная сетка и расписание (JS Tabs + Симулятор счёта) -->
+  <section class="tournaments" id="tournaments">
+    <div class="container">
+      <h2 class="section-title">Внутренние турниры и расписание</h2>
+      <p class="section-subtitle">Актуальные матчи между составами и 3v3-сетка организации</p>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="schedule">📅 Расписание матчей</button>
+        <button class="tab-btn" data-tab="bracket">🏆 Сетка 3v3 Кубка</button>
+      </div>
+
+      <!-- Вкладка 1: Расписание -->
+      <div class="tab-content active" id="tab-schedule">
+        <div class="schedule-list">
+          <div class="match-row">
+            <div class="match-time">Пятница • 19:00 МСК</div>
+            <div class="match-teams">
+              <strong>🥷 Dark Empire</strong>
+              <span class="vs">VS</span>
+              <strong>👨‍💻 Dark Legion</strong>
+            </div>
+            <div class="match-mode">Showmatch • Bo5 (Броулбол / Нокаут)</div>
+          </div>
+
+          <div class="match-row">
+            <div class="match-time">Суббота • 18:00 МСК</div>
+        <div class="match-teams">
+              <strong>🧙‍♂️ Dark Order (A)</strong>
+              <span class="vs">VS</span>
+              <strong>🧙‍♂️ Dark Order (B)</strong>
+            </div>
+            <div class="match-mode">Отбор в 3v3-ростер • Bo3</div>
+          </div>
+
+          <div class="match-row">
+            <div class="match-time">Воскресенье • 17:00 МСК</div>
+            <div class="match-teams">
+              <strong>👨‍🎓 Dark Akademia</strong>
+              <span class="vs">VS</span>
+              <strong>Резерв Legion</strong>
+            </div>
+            <div class="match-mode">Тренировочный спарринг • Bo3</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Вкладка 2: Интерактивная турнирная сетка -->
+      <div class="tab-content" id="tab-bracket">
+        <div class="bracket">
+          <div class="bracket-round">
+            <h4>Полуфиналы (1/2)</h4>
+            <div class="bracket-match">
+              <div class="bracket-team winner"><span>🥷 Dark Empire</span><strong>2</strong></div>
+              <div class="bracket-team"><span>👨‍🎓 Dark Akademia</span><strong>0</strong></div>
+            </div>
+            <div class="bracket-match">
+              <div class="bracket-team winner"><span>🧙‍♂️ Dark Order</span><strong>2</strong></div>
+              <div class="bracket-team"><span>👨‍💻 Dark Legion</span><strong>1</strong></div>
+            </div>
+          </div>
+
+          <div class="bracket-round">
+            <h4>Финал Кубка Dark Empire</h4>
+            <div class="bracket-match bracket-match--final">
+              <div class="bracket-team"><span>🥷 Dark Empire</span><strong id="finalScore1">0</strong></div>
+              <div class="bracket-team"><span>🧙‍♂️ Dark Order</span><strong id="finalScore2">0</strong></div>
+            </div>
+            <div class="bracket-controls">
+              <button class="btn btn--secondary btn--sm" type="button" id="simMatchBtn">Симулировать счёт финала</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Правила и навигация -->
+  <section class="rules" id="rules">
+    <div class="container">
+      <h2 class="section-title">Правила организации</h2>
+      <div class="rules-grid">
+        <div class="rule-card">
+          <span class="rule-num">01</span>
+          <h3>Актив и дисциплина</h3>
+          <p>Участие в клубных ивентах обязательно. При долгом неактиве без предупреждения место передаётся игрокам из академии.</p>
+        </div>
+        <div class="rule-card">
+          <span class="rule-num">02</span>
+          <h3>Уважение внутри составов</h3>
+          <p>Без токсичности в клубном чате и канале. Все спорные вопросы решаются через главу организации или вице-президентов.</p>
+        </div>
+        <div class="rule-card">
+          <span class="rule-num">03</span>
+          <h3>Система роста</h3>
+          <p>Игроки из Dark Akademia и Dark Legion при стабильном активе и росте кубков получают приоритет при переводе в основу.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#" class="logo">DARK <span>EMPIRE</span></a>
+        <p>Независимая организация • 3 клуба + академия</p>
+      </div>
+      <div class="footer__links">
+        <a href="#clubs">Составы</a>
+        <a href="#tournaments">Турниры</a>
+        <button class="btn btn--outline btn--sm open-modal" type="button" data-club="Dark Empire">Связаться с руководством</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Всплывающее уведомление о копировании -->
+  <div class="toast" id="toast">Тег клуба скопирован!</div>
+
+  <!-- Модальное окно заявки -->
+  <div class="modal" id="modal">
+    <div class="modal__overlay" id="modalOverlay"></div>    
+    
+    <div class="modal__content">
+      <button class="modal__close" id="modalClose" aria-label="Закрыть">&times;</button>
+      <h3>Заявка в <span id="selectedClubTitle">Dark Empire</span></h3>
+      <p>Укажи свой ник, тег игрока и количество кубков — рассмотрим заявку в чате организации.</p>
+      <form id="joinForm" class="join-form">
+        <select id="clubSelect">
+          <option value="Dark Empire">🥷 Dark Empire (Основа • 3.7 млн)</option>
+          <option value="Dark Legion">👨‍💻 Dark Legion (3.3 млн)</option>
+          <option value="Dark Order">🧙‍♂️ Dark Order (3 на 3 с нуля)</option>
+          <option value="Dark Akademia">👨‍🎓 Dark Akademia (Твинки от 20к)</option>
+        </select>
+        <input type="text" id="playerNick" placeholder="Ник в игре и @username в Telegram" required>
+        <input type="text" id="playerTag" placeholder="Тег игрока (например, #2PP89L0)" required>
+        <input type="number" id="playerTrophies" placeholder="Количество кубков" required>
+        <button type="submit" class="btn btn--primary btn--full">Отправить анкету</button>
+      </form>
+      <div class="form-success" id="formSuccess" hidden>
+        Анкета принята! Руководство скоро ответит тебе в Telegram.
+      </div>
+    </div>
+  </div>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
